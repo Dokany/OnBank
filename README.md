@@ -3,10 +3,10 @@
 
 ### Database Design
 #### Entity Relationship Diagram
-![alt text](./Documentation/ER\ Diagram "ER Diagram")
+![alt text](OnBank/Documentation/ER Diagram.png "ER Diagram")
 
 ### Entity-to-Relational Diagram
-![alt text](./Documentation/ER-To-Relational\ Mapping.png "ER Diagram")
+![alt text](OnBank/Documentation/ER-To-Relational Mapping.png "ER Diagram")
 
 ### Events
 - Adding Daily Interest Transactions
