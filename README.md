@@ -3,10 +3,10 @@
 
 ### Database Design
 #### Entity Relationship Diagram
-![alt text]("https://raw.githubusercontent.com/Dokany/OnBank/master/Documentation/ER%20Diagram.png" "ER Diagram")
+![alt text](https://raw.githubusercontent.com/Dokany/OnBank/master/Documentation/ER%20Diagram.png?token=ALCu3AaIKcPuDr55soQ9HY8DtYiF2Tv4ks5bQjXqwA%3D%3D "ER Diagram")
 
 ### Entity-to-Relational Diagram
-![alt text]("https://raw.githubusercontent.com/Dokany/OnBank/master/Documentation/ER-To-Relational%20Mapping.png" "ER Diagram")
+![alt text](https://raw.githubusercontent.com/Dokany/OnBank/master/Documentation/ER-To-Relational%20Mapping.png?token=ALCu3P0SqrPdll83gU8lviRINKw9J4oaks5bQjX1wA%3D%3D "ER Diagram")
 
 ### Events
 - Adding Daily Interest Transactions
