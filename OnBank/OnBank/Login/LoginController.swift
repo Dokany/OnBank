@@ -44,7 +44,7 @@ class LoginController: UIViewController {
     
     let logo: UIImageView = {
         let l = UIImageView()
-        l.image = #imageLiteral(resourceName: "icon")
+        l.image = #imageLiteral(resourceName: "icon-trans")
         l.contentMode = .scaleAspectFill
         l.layer.masksToBounds = true
         l.layer.cornerRadius = 20
@@ -107,7 +107,7 @@ class LoginController: UIViewController {
         view.addSubview(logo)
         logo.anchors(top: view.safeAreaLayoutGuide.topAnchor, topPad: 64, bottom: nil,
                      bottomPad: 0, left: nil, leftPad: 0, right: nil, rightPad: 0,
-                     height: 150, width: 150)
+                     height: 185, width: 150)
         logo.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
 

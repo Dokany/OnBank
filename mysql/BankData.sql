@@ -1,3 +1,12 @@
+/******************************************
+CSCE 253/2501
+Summer 2018
+Project 1
+
+Mohamed T Abdelrahman (ID no. 900142457)
+Yasmin ElDokany (ID no. 900131538)
+******************************************/
+
 -- Insert Teller Data
 INSERT INTO `teller` (TUsername, TPassword, TLastLogin)
 VALUES ('hudson.jalyn','$2y$10$TLV6G8.SK5skdGlTF0LIWuN8p3VeJeIQLSoZHhiKja7idmY77ZKea','0000-00-00 00:00:00'),

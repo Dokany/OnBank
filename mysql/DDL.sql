@@ -1,8 +1,17 @@
+/******************************************
+CSCE 253/2501
+Summer 2018
+Project 1
+
+Mohamed T Abdelrahman (ID no. 900142457)
+Yasmin ElDokany (ID no. 900131538)
+******************************************/
+
 -- SQL Schema for Online Banking Application
 
 CREATE TABLE administrator (
     AdminID    SMALLINT UNSIGNED ZEROFILL AUTO_INCREMENT,
-    AUsername  VARCHAR(15) NOT NULL,
+    AUsername  VARCHAR(15) NOT NULL UNIQUE,
     APassword  BINARY(60) NOT NULL,
     ALastLogin TIMESTAMP,
     CONSTRAINT administrator_AdminID_pk PRIMARY KEY(AdminID)
@@ -10,7 +19,7 @@ CREATE TABLE administrator (
 
 CREATE TABLE teller (
     TellerID   SMALLINT UNSIGNED ZEROFILL AUTO_INCREMENT,
-    TUsername  VARCHAR(15) NOT NULL,
+    TUsername  VARCHAR(15) NOT NULL UNIQUE,
     TPassword  BINARY(60) NOT NULL,
     TLastLogin TIMESTAMP,
     CONSTRAINT teller_TellerID_pk PRIMARY KEY(TellerID)
@@ -21,20 +30,20 @@ CREATE TABLE client (
     NIN        CHAR(14) NOT NULL UNIQUE,
     Fname      VARCHAR(15) NOT NULL,
     Lname      VARCHAR(15) NOT NULL,
-    CUsername  VARCHAR(15) NOT NULL,
+    CUsername  VARCHAR(15) NOT NULL UNIQUE,
     CPassword  BINARY(60) NOT NULL,
-    BDate      DATE,
-    Address    VARCHAR(20),
-    PhoneNo    INT(9) UNSIGNED,
+    Address    VARCHAR(100),
+    PhoneNo    VARCHAR(11),
     Email      VARCHAR(50),
     AdminID    SMALLINT UNSIGNED,
+    TellerID    SMALLINT UNSIGNED,
     CLastLogin TIMESTAMP,
     CONSTRAINT client_ClientID_pk PRIMARY KEY(ClientID)
 );
 
 CREATE TABLE transaction (
     TransactionNo SMALLINT UNSIGNED ZEROFILL AUTO_INCREMENT,
-    TDate    DATE NOT NULL,
+    TDate    TIMESTAMP,
     Amount   DECIMAL(14,4) NOT NULL,
     TellerID SMALLINT UNSIGNED,
     ClientID SMALLINT UNSIGNED,
@@ -79,6 +88,7 @@ CREATE TABLE account_type (
 
 -- FOREIGN KEYS
 ALTER TABLE client ADD CONSTRAINT client_AdminID_fk FOREIGN KEY (AdminID) REFERENCES administrator(AdminID);
+ALTER TABLE client ADD CONSTRAINT client_TellerID_fk FOREIGN KEY (TellerID) REFERENCES teller(TellerID);
 
 ALTER TABLE transaction ADD CONSTRAINT transaction_TellerID_fk FOREIGN KEY (TellerID) REFERENCES teller(TellerID);
 ALTER TABLE transaction ADD CONSTRAINT transaction_ClientID_fk FOREIGN KEY (ClientID) REFERENCES client(ClientID);
