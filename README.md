@@ -8,13 +8,13 @@
 
 #### Building Backend Application
 We used MAMP v4.5, configured to run MySQL v5.6.38 and PHP7.2.1, to build our application's backend.
-* Data Definition Language Schema
+- **Data Definition Language Schema**
 We formulated our databse schema's relations, columns and constraints, and imported the [file](./mysql/BankData.sql) into our database.
 
-* Data Insertion
+- **Data Insertion**
 We used [Fill Database](http://filldb.info/) to generate initial dummy data to start testing our database relations, then imported the [file](./mysql/BankData.sql) into our database.
 
-* Handling Events:
+- **Handling Events**
  - Adding Daily Interest Transactions
 One of the project requirements was adding interest transactions to account balances daily, so a simple daily event with a join between the **account** and **account_type** tables made the trick as shown:
 ~~~ mysql
@@ -26,8 +26,7 @@ CREATE EVENT daily_interest
     	UPDATE account a, account_type t SET a.Balance = a.Balance * (1 + t.InterestRate/100) WHERE a.AcctType = t.AcctType;
 ~~~
 
-
-#### Building Frontend Application
+- **Building Frontend Application**
 We used Xcode v9.4.1 to develop our iOS 11 application to cater for three different types of users: clients, tellers and administrators.
 
 
