@@ -2,9 +2,15 @@
 //  ClientHomeViewController.swift
 //  MY-Banking
 //
-//  Created by Mohamed A Tawfik on Jul/1/18.
-//  Copyright © 2018 Mohamed A Tawfik. All rights reserved.
-//
+/******************************************
+ CSCE 253/2501
+ Summer 2018
+ Project 1
+ 
+ Mohamed T Abdelrahman (ID no. 900142457)
+ Yasmin ElDokany (ID no. 900131538)
+ ******************************************/
+
 
 import UIKit
 
@@ -72,6 +78,7 @@ internal class ClientHomeViewController: UIViewController, ChangePasswordDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       // self.hideKeyboard()
         label_name.text = client_data?.name
         label_id.text = client_data?.NIN
         tf_phone.text = client_data?.phone

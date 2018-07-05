@@ -15,6 +15,7 @@ class API_AllTransactions {
     static let date = "date"
     static let amount = "amount"
     static let teller = "teller"
+    static let currency = "currency"
     
     init(){}
     

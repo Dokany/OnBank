@@ -2,9 +2,17 @@
 //  Extensions.swift
 //  AcceptSDK
 //
-//  Created by Mohamed A Tawfik on Aug/23/17.
-//  Copyright © 2017 mahmoud gamal. All rights reserved.
-//
+
+/******************************************
+ CSCE 253/2501
+ Summer 2018
+ Project 1
+ 
+ Mohamed T Abdelrahman (ID no. 900142457)
+ Yasmin ElDokany (ID no. 900131538)
+ ******************************************/
+
+
 
 import UIKit
 

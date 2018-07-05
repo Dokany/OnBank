@@ -122,12 +122,15 @@ $json = $request->getBody();
 
         if ($result == 0) {
             $responseData['type'] = 'admin';
+            $responseData['change'] = 0;
             $responseData['id'] = $db->adminID($username);
         } elseif ($result == 1) {
-            $responseData['type'] = 'wrong_password';
+            $responseData['type'] = 'unknown';
+            $responseData['change'] = 0;
             $responseData['id'] = NULL;
         } else {
             $responseData['type'] = 'unknown';
+            $responseData['change'] = 0;
             $responseData['id'] = NULL;
         }
         $response->getBody()->write(json_encode($responseData));
@@ -498,10 +501,10 @@ $app->post('/clientRegister', function (Request $request, Response $response) {
         if ($result == 0) {
             $responseData['success'] = 1;
         } elseif ($result == 1) {
-            $responseData['message'] = 'Errors!';
+            //$responseData['message'] = 'Errors!';
             $responseData['success'] = 0;
         } elseif ($result == 2) {
-            $responseData['message'] = 'Client Username Taken!';
+            //$responseData['message'] = 'Client Username Taken!';
             $responseData['success'] = 0;
         }
         $response->getBody()->write(json_encode($responseData));

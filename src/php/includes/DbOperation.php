@@ -245,7 +245,9 @@ class DbOperation
         $stmt->execute();
         $stmt->bind_result($Fname, $Lname);
         $stmt->fetch();
-        return $Fname.' '.$Lname;
+        $client = array();
+        $client['name'] = $Fname.' '.$Lname;
+        return $client;
     }
 
     //This method to approve pending client online banking application
@@ -259,7 +261,7 @@ class DbOperation
             //Returning 0 means client's application was accepted
             // Creating a SmsController object to send sms
             $sms = new SmsController();
-            //$sms->sendSms('Your OnBank account has been approved.');
+            $sms->sendSms('Your OnBank account has been approved.');
             return 0;
         } else {
             //Returning 1 means failed to accept client's application
@@ -542,7 +544,7 @@ class DbOperation
             // Returning 0 means deposit created successfully
             // Creating a SmsController object to send sms
             $sms = new SmsController();
-            //$sms->sendSms('Your OnBank deposit of '.$Amount.' is confirmed.');
+            $sms->sendSms('Your OnBank deposit of '.$Amount.' is confirmed.');
             return 0;
         } else {
             // Returning 1 means failed to create deposit
@@ -562,7 +564,7 @@ class DbOperation
             // Returning 0 means withdrawl created successfully
             // Creating a SmsController object to send sms
             $sms = new SmsController();
-            //$sms->sendSms('Your OnBank deposit of '.$Amount.' is confirmed.');
+            $sms->sendSms('Your OnBank deposit of '.$Amount.' is confirmed.');
             return 0;
         } else {
             //Returning 1 means failed to create withdrawl
@@ -595,7 +597,7 @@ class DbOperation
             // Returning 0 means withdrawl created successfully
             // Creating a SmsController object to send sms
             $sms = new SmsController();
-            //$sms->sendSms('Your OnBank transfer of '.$Amount.' is confirmed.');
+            $sms->sendSms('Your OnBank transfer of '.$Amount.' is confirmed.');
             return 0;
         } else {
             //Returning 1 means failed to create withdrawl
@@ -788,7 +790,7 @@ class DbOperation
                 // Returning 0 means client password changed successfully
                 // Creating a SmsController object to send sms
                 $sms = new SmsController();
-                //$sms->sendSms('Hello, your OnBank temporary password: '.$newPass);
+                $sms->sendSms('Hello, your OnBank temporary password: '.$newPass);
                 return 0;
             } else {
                 // Returning 1 means failed to change client's password

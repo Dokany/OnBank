@@ -2,9 +2,15 @@
 //  ClientNewTransactionViewController.swift
 //  MY-Banking
 //
-//  Created by Mohamed A Tawfik on Jul/3/18.
-//  Copyright © 2018 Mohamed A Tawfik. All rights reserved.
-//
+/******************************************
+ CSCE 253/2501
+ Summer 2018
+ Project 1
+ 
+ Mohamed T Abdelrahman (ID no. 900142457)
+ Yasmin ElDokany (ID no. 900131538)
+ ******************************************/
+
 
 import Foundation
 import UIKit
@@ -21,6 +27,7 @@ internal class ClientNewTransactionViewController: UIViewController, PerformTran
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+      //  self.hideKeyboard()
         spinner.isHidden = true
         perform_transaction_handler = PerformTransactionHandler(delegate: self)
         

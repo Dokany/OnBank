@@ -2,9 +2,15 @@
 //  AdminViewController.swift
 //  MY-Banking
 //
-//  Created by Mohamed A Tawfik on Jul/4/18.
-//  Copyright © 2018 Mohamed A Tawfik. All rights reserved.
-//
+/******************************************
+ CSCE 253/2501
+ Summer 2018
+ Project 1
+ 
+ Mohamed T Abdelrahman (ID no. 900142457)
+ Yasmin ElDokany (ID no. 900131538)
+ ******************************************/
+
 
 import Foundation
 import UIKit
@@ -27,6 +33,7 @@ internal class AdminViewController: UIViewController, GetAdminsDelegate, GetTell
     override func viewWillAppear(_ animated: Bool) {
     }
     override func viewDidLoad() {
+     //   self.hideKeyboard()
         get_admins_handler = GetAdminsHandler(delegate: self)
         get_tellers_handler = GetTellersHandler(delegate: self)
         all_transactions_handler = AllTransactionsHandler(delegate: self)

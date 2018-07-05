@@ -2,9 +2,15 @@
 //  TransactionViewController.swift
 //  MY-Banking
 //
-//  Created by Mohamed A Tawfik on Jul/4/18.
-//  Copyright © 2018 Mohamed A Tawfik. All rights reserved.
-//
+/******************************************
+ CSCE 253/2501
+ Summer 2018
+ Project 1
+ 
+ Mohamed T Abdelrahman (ID no. 900142457)
+ Yasmin ElDokany (ID no. 900131538)
+ ******************************************/
+
 
 import Foundation
 import UIKit
@@ -18,6 +24,11 @@ internal class TransactionViewController: UIViewController {
     @IBOutlet weak var amount_label: UILabel!
     @IBOutlet weak var currency_label: UILabel!
     @IBOutlet weak var teller_label: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+      //  self.hideKeyboard()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

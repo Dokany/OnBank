@@ -2,9 +2,15 @@
 //  AdminApplicationHandler.swift
 //  MY-Banking
 //
-//  Created by Mohamed A Tawfik on Jul/5/18.
-//  Copyright © 2018 Mohamed A Tawfik. All rights reserved.
-//
+/******************************************
+ CSCE 253/2501
+ Summer 2018
+ Project 1
+ 
+ Mohamed T Abdelrahman (ID no. 900142457)
+ Yasmin ElDokany (ID no. 900131538)
+ ******************************************/
+
 
 import Foundation
 
@@ -76,8 +82,8 @@ class AdminApplicationHandler {
         if let username = element[API_AdminApplication.username] as? String {
             if let address = element[API_AdminApplication.address] as? String {
                 if let email = element[API_AdminApplication.email] as? String {
-                    if let name = element[API_AdminApplication.email] as? String {
-                        if let phone = element[API_AdminApplication.email] as? String {
+                    if let name = element[API_AdminApplication.name] as? String {
+                        if let phone = element[API_AdminApplication.phone] as? String {
                             application = ClientApplication(NIN: nin, name: name, f_name: nil, l_name: nil, username: username, phone: phone, email: email, address: address)
                         }
                     }

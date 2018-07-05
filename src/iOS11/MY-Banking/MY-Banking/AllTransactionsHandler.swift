@@ -93,12 +93,15 @@ class AllTransactionsHandler {
         if let id = element[API_AllTransactions.id] as? Int {
             if let date = element[API_AllTransactions.date] as? String {
                 if let amount = element[API_AllTransactions.amount] as? String {
-                    transaction = Transaction()
-                    transaction?.number = id
-                    transaction?.date = date
-                    transaction?.amount = amount
-                    transaction?.teller = element[API_AllTransactions.teller] as? Int
-                    transaction?.acctno = element[API_AllTransactions.acctno] as? Int
+                    if let currency = element[API_AllTransactions.currency] as? String {
+                        transaction = Transaction()
+                        transaction?.number = id
+                        transaction?.date = date
+                        transaction?.amount = amount
+                        transaction?.currency = currency
+                        transaction?.teller = element[API_AllTransactions.teller] as? Int
+                        transaction?.acctno = element[API_AllTransactions.acctno] as? Int
+                    }
                 }
             }
         }
