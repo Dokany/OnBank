@@ -29,7 +29,8 @@ CREATE EVENT daily_interest
 ~~~
 
 ### Building Frontend Application
-We used Xcode v9.4.1 to develop our iOS 11 application to cater for three different types of users: clients, tellers and administrators.
+We used Xcode v9.4.1 to develop our iOS 11 application to cater for three different types of users: clients, tellers and administrators, and used this following color palettle for our storyboards.
 
+![alt text](https://raw.githubusercontent.com/Dokany/OnBank/master/assets/palette.png "OnBank Color Palette")
 
 ## Demo
