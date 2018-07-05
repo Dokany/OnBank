@@ -1,4 +1,6 @@
 # Online Banking Application
+![alt text](https://raw.githubusercontent.com/Dokany/OnBank/master/Documentation/UI.png "OnBank iOS App")
+
 ## Application Development Process
 ### Diagrams
 ![alt text](https://raw.githubusercontent.com/Dokany/OnBank/master/Documentation/ERD.png?token=ALCu3DH-8Gs7xCZNB7wyEkXfmvQ6WtwFks5bRhtwwA%3D%3D "ER Diagram")
