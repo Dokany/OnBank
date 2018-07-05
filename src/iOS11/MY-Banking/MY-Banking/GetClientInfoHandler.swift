@@ -19,8 +19,8 @@ class GetClientInfoHandler {
      This method is called to attempt to get client info
      */
     func getClientInfo (username: String){
-        //self.delegate!.clientDataRetrieved(data: self.retrieveHardCodedInfo(username: username))
-        //return;
+      //  self.delegate!.clientDataRetrieved(data: self.retrieveHardCodedInfo(username: username))
+      //  return;
        // /*
         let API_getclientinfo = API_GetClientInfo()
         API_getclientinfo.request(username: username, completionHandler: { data, response, error in

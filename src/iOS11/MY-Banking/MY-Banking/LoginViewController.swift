@@ -9,12 +9,13 @@
 import UIKit
 
 internal class LoginViewController: UIViewController, LogInDelegate, GetClientInfoDelegate {
-    
     var login_handler : LogInHandler?
     var id: Int?
     var get_client_info_handler : GetClientInfoHandler?
     var client_data : ClientData?
     var password: String?
+    var username: String?
+    var type: String?
     
     @IBOutlet weak var tf_username: UITextField!
     @IBOutlet weak var tf_password: UITextField!
@@ -28,6 +29,21 @@ internal class LoginViewController: UIViewController, LogInDelegate, GetClientIn
         tf_username.backgroundColor = .white
         tf_password.backgroundColor = .white
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    @IBAction func register(_ sender: UIButton) {
+        performSegue(withIdentifier: "client_register_segue", sender: nil)
+    }
+    @IBAction func forgotPassword(_ sender: UIButton) {
+        if let username = tf_username.text {
+            if username.count > 0 {
+                self.pauseInteraction()
+                login_handler?.forgotPassword(username: username)
+            } else {
+                AlertShower.showErrorAlert(title: "Incomplete Information", message: "Please enter a valid username")
+            }
+        } else {
+            AlertShower.showErrorAlert(title: "Incomplete Information", message: "Please enter a valid username")
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -63,33 +79,51 @@ internal class LoginViewController: UIViewController, LogInDelegate, GetClientIn
         
     }
     
-    func userDidAttemptLogIn(result: LogInResult, id: Int?) {
+    func userDidAttemptLogIn(result: LogInResult, id: Int?, must_change: Bool, type: String) {
         resumeInteraction()
         self.id = id
-        let username = tf_username.text!
+        self.username = tf_username.text!
         self.password = tf_password.text
+        self.type = type
         tf_password.text = ""
         tf_username.text = ""
-        switch result {
-            case LogInResult.UnknownCredentials:
-                AlertShower.showErrorAlert(title: "Error", message: "Incorrect credentials")
-                break
-            case LogInResult.ConnectionError:
-                AlertShower.showErrorAlert(title: "Error", message: "Connection error")
-                break
-            case LogInResult.Client:
-                AlertShower.showSweetAlertAndExecute(onCondition: true, title: "Success", message: "Opening client portal", style: .success, buttonTitle: "Ok", action: {(_ isOtherButton: Bool) -> Void in
-                        self.get_client_info_handler!.getClientInfo(username: username)
-                })
-                break
-            case LogInResult.Teller:
-                AlertShower.showSweetAlertAndExecute(onCondition: true, title: "Success", message: "Opening teller portal", style: .success, buttonTitle: "Ok", action: {(_ isOtherButton: Bool) -> Void in
-                    self.performSegue(withIdentifier: "segue_teller", sender: nil)
-                })
-                break
-            case LogInResult.Admin:
-                AlertShower.showSuccessAlert(title: "Success", message: "Opening admin portal")
-                break
+        
+        if must_change {
+            AlertShower.showSweetAlertAndExecute(onCondition: true, title: "Note", message: "You need to change your password", style: .warning, buttonTitle: "OK", action: {(_ isOtherButton: Bool) -> Void in
+                self.performSegue(withIdentifier: "segue_change_password", sender: nil)
+            })
+        } else {
+            switch result {
+                case LogInResult.UnknownCredentials:
+                    AlertShower.showErrorAlert(title: "Error", message: "Incorrect credentials")
+                    break
+                case LogInResult.ConnectionError:
+                    AlertShower.showErrorAlert(title: "Error", message: "Connection error")
+                    break
+                case LogInResult.Client:
+                    AlertShower.showSweetAlertAndExecute(onCondition: true, title: "Success", message: "Opening client portal", style: .success, buttonTitle: "OK", action: {(_ isOtherButton: Bool) -> Void in
+                            self.get_client_info_handler!.getClientInfo(username: self.username!)
+                    })
+                    break
+                case LogInResult.Teller:
+                    AlertShower.showSweetAlertAndExecute(onCondition: true, title: "Success", message: "Opening teller portal", style: .success, buttonTitle: "OK", action: {(_ isOtherButton: Bool) -> Void in
+                        self.performSegue(withIdentifier: "segue_teller", sender: nil)
+                    })
+                    break
+                case LogInResult.Admin:
+                    AlertShower.showSweetAlertAndExecute(onCondition: true, title: "Success", message: "Opening admin portal", style: .success, buttonTitle: "OK", action: {(_ isOtherButton: Bool) -> Void in
+                        self.performSegue(withIdentifier: "segue_admin", sender: nil)
+                    })
+                    break
+            }
+        }
+    }
+    func userDidResetPassword(result: Bool) {
+        resumeInteraction()
+        if result {
+            AlertShower.showSuccessAlert(title: "Password Reset", message: "Check your messages")
+        } else {
+            AlertShower.showErrorAlert(title: "Error", message: "Password not reset")
         }
     }
     
@@ -111,6 +145,13 @@ internal class LoginViewController: UIViewController, LogInDelegate, GetClientIn
         }
         if let destinationViewController = segue.destination as? TellerViewController {
             destinationViewController.tellerId = self.id
+        }
+        if let destinationViewController = segue.destination as? AdminViewController {
+            destinationViewController.adminId = self.id
+        }
+        if let destinationViewController = segue.destination as? ChangePAsswordViewController {
+            destinationViewController.type = self.type
+            destinationViewController.username = self.username
         }
     }
     

@@ -13,4 +13,6 @@ struct Transaction {
     var date: String?
     var amount: String?
     var teller: Int?
+    var acctno: Int?
+    var currency: String?
 }

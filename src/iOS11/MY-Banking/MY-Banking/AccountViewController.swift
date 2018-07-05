@@ -8,30 +8,29 @@
 
 import UIKit
 
-internal class AccountViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+internal class AccountViewController: UIViewController, GetTransactionssDelegate{
     var clientID: Int?
     var tellerID: Int?
     var account: Account?
+    var get_transactions_handler: GetTransactionsHandler?
     var transactions: [Transaction]?
     var from_client: Bool?
     
-    @IBOutlet weak var transactions_table: UITableView!
     @IBOutlet weak var currency_label: UILabel!
     @IBOutlet weak var balance_label: UILabel!
     @IBOutlet weak var account_type_label: UILabel!
     @IBOutlet weak var account_number_label: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
-        transactions_table.reloadData()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        transactions_table.delegate = self
-        transactions_table.dataSource = self
+        get_transactions_handler = GetTransactionsHandler(delegate: self)
         account_number_label.text = "Account Number: " + "\(account!.number!)"
         account_type_label.text! = "Type: " + account!.acc_type!
         balance_label.text! = "Balance: " + String(account!.balance!)
-        currency_label.text! = account!.curr!
+        currency_label.text! = "Currency: " + account!.curr!
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -54,23 +53,6 @@ internal class AccountViewController: UIViewController, UITableViewDelegate, UIT
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if transactions == nil {
-            return 0
-        } else {
-            return transactions!.count
-        }
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell! = self.transactions_table
-            .dequeueReusableCell(withIdentifier: "cell_tran") as UITableViewCell?
-        
-        cell.textLabel!.text = String(self.transactions![indexPath.row].amount!)
-        cell.detailTextLabel!.text = String(self.transactions![indexPath.row].number!) + " / " + self.transactions![indexPath.row].date!
-        
-        return cell
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationViewController = segue.destination as? ClientNewTransactionViewController {
             destinationViewController.clientID = self.clientID
@@ -81,9 +63,35 @@ internal class AccountViewController: UIViewController, UITableViewDelegate, UIT
             destinationViewController.tellerID  = self.tellerID
             destinationViewController.account = self.account
         }
-        
+        if let destinationViewController = segue.destination as? AdminItemsViewController {
+            destinationViewController.are_transactions = true
+            destinationViewController.received_transactions = transactions
+            destinationViewController.title_to_view = "Transactions"
+        }
     }
     
-   
+    @IBAction func viewTransactions(_ sender: UIButton) {
+        get_transactions_handler?.getTransactions(acctno: self.account!.number!)
+    }
+    
+    func transactionsReceived(transactions: [Transaction]?) {
+        self.transactions = transactions
+        if transactions == nil {
+            AlertShower.showErrorAlert(title: "Error", message: "No Transactions found")
+        } else {
+            enhanceTransactions()
+            resumeInteraction()
+            AlertShower.showSweetAlertAndExecute(onCondition: true, title: "Success", message: "\(transactions!.count) Transactions Found", style: .success, buttonTitle: "OK", action: {(_ isOtherButton: Bool) -> Void in
+                self.performSegue(withIdentifier: "client_transactions_segue", sender: nil)
+            })
+        }
+    }
+    
+    func enhanceTransactions() {
+        for index in transactions!.indices {
+            transactions![index].acctno = account!.number
+            transactions![index].currency = account!.curr
+        }
+    }
     
 }

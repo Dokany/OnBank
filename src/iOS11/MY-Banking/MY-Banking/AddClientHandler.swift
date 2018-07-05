@@ -15,9 +15,9 @@ class AddClientHandler {
         self.delegate = delegate
     }
     
-    func addClient(tellerId: Int, NIN: String, username: String, password: String, email: String, phone: String, first_name: String, last_name: String, address: String?){
-        self.delegate.onClientAdded(result: true)
-        return;
+    func addClient(tellerId: Int?, NIN: String, username: String, password: String, email: String, phone: String, first_name: String, last_name: String, address: String){
+     // self.delegate.onClientAdded(result: true)
+     // return;
         
         let Api_addClient = API_AddClient()
         Api_addClient.request(tellerId: tellerId, NIN: NIN, username: username, password: password, phone: phone, email: email, first_name: first_name, last_name: last_name, address: address, completionHandler: { data, response, error in

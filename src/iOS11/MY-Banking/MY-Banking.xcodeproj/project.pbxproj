@@ -22,6 +22,27 @@
 		A7159C0720E8F52F00C26A0C /* AlertShower.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7159C0620E8F52F00C26A0C /* AlertShower.swift */; };
 		A7159C0B20E8FA7000C26A0C /* LogCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7159C0A20E8FA7000C26A0C /* LogCat.swift */; };
 		A7159C0E20E8FC2100C26A0C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7159C0D20E8FC2100C26A0C /* LoginViewController.swift */; };
+		A723E57C20ED528500EEC8C7 /* API_AllTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A723E57B20ED528500EEC8C7 /* API_AllTransactions.swift */; };
+		A723E57F20ED529600EEC8C7 /* AllTransactionsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A723E57E20ED529600EEC8C7 /* AllTransactionsDelegate.swift */; };
+		A723E58120ED52A100EEC8C7 /* AllTransactionsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A723E58020ED52A100EEC8C7 /* AllTransactionsHandler.swift */; };
+		A723E58320ED54A400EEC8C7 /* AdminItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A723E58220ED54A400EEC8C7 /* AdminItemsViewController.swift */; };
+		A723E58520ED56E700EEC8C7 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A723E58420ED56E700EEC8C7 /* TransactionViewController.swift */; };
+		A73BA6EE20ED242E008EC8E2 /* AddEmployeeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73BA6ED20ED242E008EC8E2 /* AddEmployeeDelegate.swift */; };
+		A73BA6F020ED243A008EC8E2 /* AddEmployeeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73BA6EF20ED243A008EC8E2 /* AddEmployeeHandler.swift */; };
+		A73BA6F220ED2448008EC8E2 /* API_AddEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73BA6F120ED2448008EC8E2 /* API_AddEmployee.swift */; };
+		A753F10E20ED79890037F85E /* AdminApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753F10D20ED79890037F85E /* AdminApplicationViewController.swift */; };
+		A753F11120ED7A2A0037F85E /* API_PendingClients.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753F11020ED7A2A0037F85E /* API_PendingClients.swift */; };
+		A753F11320ED7A360037F85E /* PendingClientsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753F11220ED7A360037F85E /* PendingClientsDelegate.swift */; };
+		A753F11520ED7A430037F85E /* PendingClientsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753F11420ED7A430037F85E /* PendingClientsHandler.swift */; };
+		A753F11720ED7A8E0037F85E /* PendingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753F11620ED7A8E0037F85E /* PendingClient.swift */; };
+		A753F11A20ED7D070037F85E /* AdminApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753F11920ED7D070037F85E /* AdminApplicationDelegate.swift */; };
+		A753F11C20ED7D140037F85E /* API_AdminApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753F11B20ED7D140037F85E /* API_AdminApplication.swift */; };
+		A753F11E20ED7D200037F85E /* AdminApplicationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753F11D20ED7D200037F85E /* AdminApplicationHandler.swift */; };
+		A753F12020ED7D930037F85E /* ClientApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753F11F20ED7D930037F85E /* ClientApplication.swift */; };
+		A753F12320ED8ECE0037F85E /* ApproveApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753F12220ED8ECE0037F85E /* ApproveApplicationDelegate.swift */; };
+		A753F12520ED8ED90037F85E /* ApproveApplicationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753F12420ED8ED90037F85E /* ApproveApplicationHandler.swift */; };
+		A753F12720ED8EE30037F85E /* API_ApproveApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753F12620ED8EE30037F85E /* API_ApproveApplication.swift */; };
+		A753F12920ED9A740037F85E /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753F12820ED9A740037F85E /* ChangePasswordViewController.swift */; };
 		A768360320EA9B0B00B0941F /* API_GetAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768360220EA9B0B00B0941F /* API_GetAccounts.swift */; };
 		A768360520EA9B9700B0941F /* GetAccountsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768360420EA9B9700B0941F /* GetAccountsHandler.swift */; };
 		A768360720EA9BA400B0941F /* GetAccountsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768360620EA9BA400B0941F /* GetAccountsDelegate.swift */; };
@@ -59,6 +80,20 @@
 		A7D0409820EC3BD500A332A0 /* AddClientDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D0409720EC3BD500A332A0 /* AddClientDelegate.swift */; };
 		A7D0409A20EC3BDF00A332A0 /* AddClientHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D0409920EC3BDF00A332A0 /* AddClientHandler.swift */; };
 		A7D0409C20EC42CC00A332A0 /* TellerNewTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D0409B20EC42CC00A332A0 /* TellerNewTransactionViewController.swift */; };
+		A7D27C6820ED0C4F0088219F /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D27C6720ED0C4F0088219F /* AdminViewController.swift */; };
+		A7D27C6B20ED0E1C0088219F /* API_GetAdmins.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D27C6A20ED0E1C0088219F /* API_GetAdmins.swift */; };
+		A7D27C6D20ED0E260088219F /* GetAdminsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D27C6C20ED0E260088219F /* GetAdminsDelegate.swift */; };
+		A7D27C6F20ED0E390088219F /* GetAdminsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D27C6E20ED0E390088219F /* GetAdminsHandler.swift */; };
+		A7D27C7120ED0E9E0088219F /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D27C7020ED0E9E0088219F /* Admin.swift */; };
+		A7D27C7420ED144A0088219F /* API_GetTellers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D27C7320ED144A0088219F /* API_GetTellers.swift */; };
+		A7D27C7620ED14570088219F /* GetTellersDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D27C7520ED14570088219F /* GetTellersDelegate.swift */; };
+		A7D27C7820ED14620088219F /* GetTellersHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D27C7720ED14620088219F /* GetTellersHandler.swift */; };
+		A7D27C7A20ED147F0088219F /* Teller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D27C7920ED147F0088219F /* Teller.swift */; };
+		A7D27C8320ED182D0088219F /* DeleteEmployeeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D27C8220ED182D0088219F /* DeleteEmployeeDelegate.swift */; };
+		A7D27C8520ED18370088219F /* API_DeleteEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D27C8420ED18370088219F /* API_DeleteEmployee.swift */; };
+		A7D27C8720ED18460088219F /* DeleteEmployeeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D27C8620ED18460088219F /* DeleteEmployeeHandler.swift */; };
+		A7D27C8920ED1A980088219F /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D27C8820ED1A980088219F /* EmployeeViewController.swift */; };
+		A7DC6A5920EDA81D00DE9286 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DC6A5820EDA81D00DE9286 /* RegisterViewController.swift */; };
 		A7FA124C20EAE7CB00AB9AAC /* API_PerformTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FA124B20EAE7CB00AB9AAC /* API_PerformTransaction.swift */; };
 		A7FA124E20EAE7D700AB9AAC /* PerformTransactionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FA124D20EAE7D700AB9AAC /* PerformTransactionDelegate.swift */; };
 		A7FA125020EAE7E600AB9AAC /* PerformTransactionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FA124F20EAE7E600AB9AAC /* PerformTransactionHandler.swift */; };
@@ -104,6 +139,27 @@
 		A7159C0620E8F52F00C26A0C /* AlertShower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertShower.swift; sourceTree = "<group>"; };
 		A7159C0A20E8FA7000C26A0C /* LogCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCat.swift; sourceTree = "<group>"; };
 		A7159C0D20E8FC2100C26A0C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A723E57B20ED528500EEC8C7 /* API_AllTransactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_AllTransactions.swift; sourceTree = "<group>"; };
+		A723E57E20ED529600EEC8C7 /* AllTransactionsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTransactionsDelegate.swift; sourceTree = "<group>"; };
+		A723E58020ED52A100EEC8C7 /* AllTransactionsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTransactionsHandler.swift; sourceTree = "<group>"; };
+		A723E58220ED54A400EEC8C7 /* AdminItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminItemsViewController.swift; sourceTree = "<group>"; };
+		A723E58420ED56E700EEC8C7 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		A73BA6ED20ED242E008EC8E2 /* AddEmployeeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeDelegate.swift; sourceTree = "<group>"; };
+		A73BA6EF20ED243A008EC8E2 /* AddEmployeeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeHandler.swift; sourceTree = "<group>"; };
+		A73BA6F120ED2448008EC8E2 /* API_AddEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_AddEmployee.swift; sourceTree = "<group>"; };
+		A753F10D20ED79890037F85E /* AdminApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminApplicationViewController.swift; sourceTree = "<group>"; };
+		A753F11020ED7A2A0037F85E /* API_PendingClients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_PendingClients.swift; sourceTree = "<group>"; };
+		A753F11220ED7A360037F85E /* PendingClientsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingClientsDelegate.swift; sourceTree = "<group>"; };
+		A753F11420ED7A430037F85E /* PendingClientsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingClientsHandler.swift; sourceTree = "<group>"; };
+		A753F11620ED7A8E0037F85E /* PendingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingClient.swift; sourceTree = "<group>"; };
+		A753F11920ED7D070037F85E /* AdminApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminApplicationDelegate.swift; sourceTree = "<group>"; };
+		A753F11B20ED7D140037F85E /* API_AdminApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_AdminApplication.swift; sourceTree = "<group>"; };
+		A753F11D20ED7D200037F85E /* AdminApplicationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminApplicationHandler.swift; sourceTree = "<group>"; };
+		A753F11F20ED7D930037F85E /* ClientApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientApplication.swift; sourceTree = "<group>"; };
+		A753F12220ED8ECE0037F85E /* ApproveApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveApplicationDelegate.swift; sourceTree = "<group>"; };
+		A753F12420ED8ED90037F85E /* ApproveApplicationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveApplicationHandler.swift; sourceTree = "<group>"; };
+		A753F12620ED8EE30037F85E /* API_ApproveApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_ApproveApplication.swift; sourceTree = "<group>"; };
+		A753F12820ED9A740037F85E /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		A768360220EA9B0B00B0941F /* API_GetAccounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_GetAccounts.swift; sourceTree = "<group>"; };
 		A768360420EA9B9700B0941F /* GetAccountsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountsHandler.swift; sourceTree = "<group>"; };
 		A768360620EA9BA400B0941F /* GetAccountsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccountsDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +197,20 @@
 		A7D0409720EC3BD500A332A0 /* AddClientDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClientDelegate.swift; sourceTree = "<group>"; };
 		A7D0409920EC3BDF00A332A0 /* AddClientHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClientHandler.swift; sourceTree = "<group>"; };
 		A7D0409B20EC42CC00A332A0 /* TellerNewTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TellerNewTransactionViewController.swift; sourceTree = "<group>"; };
+		A7D27C6720ED0C4F0088219F /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		A7D27C6A20ED0E1C0088219F /* API_GetAdmins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_GetAdmins.swift; sourceTree = "<group>"; };
+		A7D27C6C20ED0E260088219F /* GetAdminsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAdminsDelegate.swift; sourceTree = "<group>"; };
+		A7D27C6E20ED0E390088219F /* GetAdminsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAdminsHandler.swift; sourceTree = "<group>"; };
+		A7D27C7020ED0E9E0088219F /* Admin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
+		A7D27C7320ED144A0088219F /* API_GetTellers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_GetTellers.swift; sourceTree = "<group>"; };
+		A7D27C7520ED14570088219F /* GetTellersDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTellersDelegate.swift; sourceTree = "<group>"; };
+		A7D27C7720ED14620088219F /* GetTellersHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTellersHandler.swift; sourceTree = "<group>"; };
+		A7D27C7920ED147F0088219F /* Teller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teller.swift; sourceTree = "<group>"; };
+		A7D27C8220ED182D0088219F /* DeleteEmployeeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteEmployeeDelegate.swift; sourceTree = "<group>"; };
+		A7D27C8420ED18370088219F /* API_DeleteEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_DeleteEmployee.swift; sourceTree = "<group>"; };
+		A7D27C8620ED18460088219F /* DeleteEmployeeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteEmployeeHandler.swift; sourceTree = "<group>"; };
+		A7D27C8820ED1A980088219F /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
+		A7DC6A5820EDA81D00DE9286 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A7FA124B20EAE7CB00AB9AAC /* API_PerformTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_PerformTransaction.swift; sourceTree = "<group>"; };
 		A7FA124D20EAE7D700AB9AAC /* PerformTransactionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformTransactionDelegate.swift; sourceTree = "<group>"; };
 		A7FA124F20EAE7E600AB9AAC /* PerformTransactionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformTransactionHandler.swift; sourceTree = "<group>"; };
@@ -197,7 +267,6 @@
 			children = (
 				A7159C0320E8F50400C26A0C /* SweetAlert */,
 				A7159C0920E8FA6200C26A0C /* Helpers */,
-				A7B9736A20E950530051A820 /* BankingInfo */,
 				A7323D2F20E9607000D3BEA3 /* ViewControllers */,
 				A7159BFE20E8F0D100C26A0C /* APIs */,
 				A7159BC820E8E98700C26A0C /* AppDelegate.swift */,
@@ -230,8 +299,14 @@
 		A7159BFE20E8F0D100C26A0C /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				A753F12120ED8EBA0037F85E /* ApproveApplication */,
+				A753F11820ED7CE90037F85E /* AdminApplication */,
+				A753F10F20ED79E70037F85E /* PendingClients */,
 				A7159BFF20E8F0F300C26A0C /* Constants.swift */,
 				A7B9736D20E958BC0051A820 /* RequestsHelper.swift */,
+				A723E57A20ED526100EEC8C7 /* AllTransactions */,
+				A73BA6EC20ED241F008EC8E2 /* AddEmployee */,
+				A7D27C7B20ED179F0088219F /* DeleteEmployee */,
 				A7B9737420E9600F0051A820 /* LogIn */,
 				A7B9737520E960180051A820 /* GetClientInfo */,
 				A7B0041E20E9821E00F7234C /* ChangePassword */,
@@ -242,6 +317,8 @@
 				A7D0408D20EC2BD200A332A0 /* AddAccount */,
 				A7D0409420EC3BA100A332A0 /* AddClient */,
 				A7CC8B1420EC443600BB2DFE /* TellerTransaction */,
+				A7D27C7220ED143E0088219F /* GetTellers */,
+				A7D27C6920ED0E080088219F /* GetAdmins */,
 			);
 			name = APIs;
 			sourceTree = "<group>";
@@ -264,6 +341,16 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		A723E57A20ED526100EEC8C7 /* AllTransactions */ = {
+			isa = PBXGroup;
+			children = (
+				A723E57B20ED528500EEC8C7 /* API_AllTransactions.swift */,
+				A723E57E20ED529600EEC8C7 /* AllTransactionsDelegate.swift */,
+				A723E58020ED52A100EEC8C7 /* AllTransactionsHandler.swift */,
+			);
+			name = AllTransactions;
+			sourceTree = "<group>";
+		};
 		A7323D2F20E9607000D3BEA3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,8 +361,57 @@
 				A7FA125120EAEB2C00AB9AAC /* ClientNewTransactionViewController.swift */,
 				A7D0408920EC22DA00A332A0 /* TellerViewController.swift */,
 				A7D0409B20EC42CC00A332A0 /* TellerNewTransactionViewController.swift */,
+				A7D27C6720ED0C4F0088219F /* AdminViewController.swift */,
+				A7D27C8820ED1A980088219F /* EmployeeViewController.swift */,
+				A723E58220ED54A400EEC8C7 /* AdminItemsViewController.swift */,
+				A723E58420ED56E700EEC8C7 /* TransactionViewController.swift */,
+				A753F10D20ED79890037F85E /* AdminApplicationViewController.swift */,
+				A753F12820ED9A740037F85E /* ChangePasswordViewController.swift */,
+				A7DC6A5820EDA81D00DE9286 /* RegisterViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A73BA6EC20ED241F008EC8E2 /* AddEmployee */ = {
+			isa = PBXGroup;
+			children = (
+				A73BA6ED20ED242E008EC8E2 /* AddEmployeeDelegate.swift */,
+				A73BA6EF20ED243A008EC8E2 /* AddEmployeeHandler.swift */,
+				A73BA6F120ED2448008EC8E2 /* API_AddEmployee.swift */,
+			);
+			name = AddEmployee;
+			sourceTree = "<group>";
+		};
+		A753F10F20ED79E70037F85E /* PendingClients */ = {
+			isa = PBXGroup;
+			children = (
+				A753F11020ED7A2A0037F85E /* API_PendingClients.swift */,
+				A753F11220ED7A360037F85E /* PendingClientsDelegate.swift */,
+				A753F11420ED7A430037F85E /* PendingClientsHandler.swift */,
+				A753F11620ED7A8E0037F85E /* PendingClient.swift */,
+			);
+			name = PendingClients;
+			sourceTree = "<group>";
+		};
+		A753F11820ED7CE90037F85E /* AdminApplication */ = {
+			isa = PBXGroup;
+			children = (
+				A753F11920ED7D070037F85E /* AdminApplicationDelegate.swift */,
+				A753F11B20ED7D140037F85E /* API_AdminApplication.swift */,
+				A753F11D20ED7D200037F85E /* AdminApplicationHandler.swift */,
+				A753F11F20ED7D930037F85E /* ClientApplication.swift */,
+			);
+			name = AdminApplication;
+			sourceTree = "<group>";
+		};
+		A753F12120ED8EBA0037F85E /* ApproveApplication */ = {
+			isa = PBXGroup;
+			children = (
+				A753F12220ED8ECE0037F85E /* ApproveApplicationDelegate.swift */,
+				A753F12420ED8ED90037F85E /* ApproveApplicationHandler.swift */,
+				A753F12620ED8EE30037F85E /* API_ApproveApplication.swift */,
+			);
+			name = ApproveApplication;
 			sourceTree = "<group>";
 		};
 		A768360120EA9AF600B0941F /* GetAccounts */ = {
@@ -333,13 +469,6 @@
 			name = GetTransactions;
 			sourceTree = "<group>";
 		};
-		A7B9736A20E950530051A820 /* BankingInfo */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = BankingInfo;
-			sourceTree = "<group>";
-		};
 		A7B9737420E9600F0051A820 /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +519,38 @@
 				A7D0409920EC3BDF00A332A0 /* AddClientHandler.swift */,
 			);
 			name = AddClient;
+			sourceTree = "<group>";
+		};
+		A7D27C6920ED0E080088219F /* GetAdmins */ = {
+			isa = PBXGroup;
+			children = (
+				A7D27C6A20ED0E1C0088219F /* API_GetAdmins.swift */,
+				A7D27C6C20ED0E260088219F /* GetAdminsDelegate.swift */,
+				A7D27C6E20ED0E390088219F /* GetAdminsHandler.swift */,
+				A7D27C7020ED0E9E0088219F /* Admin.swift */,
+			);
+			name = GetAdmins;
+			sourceTree = "<group>";
+		};
+		A7D27C7220ED143E0088219F /* GetTellers */ = {
+			isa = PBXGroup;
+			children = (
+				A7D27C7320ED144A0088219F /* API_GetTellers.swift */,
+				A7D27C7520ED14570088219F /* GetTellersDelegate.swift */,
+				A7D27C7720ED14620088219F /* GetTellersHandler.swift */,
+				A7D27C7920ED147F0088219F /* Teller.swift */,
+			);
+			name = GetTellers;
+			sourceTree = "<group>";
+		};
+		A7D27C7B20ED179F0088219F /* DeleteEmployee */ = {
+			isa = PBXGroup;
+			children = (
+				A7D27C8220ED182D0088219F /* DeleteEmployeeDelegate.swift */,
+				A7D27C8420ED18370088219F /* API_DeleteEmployee.swift */,
+				A7D27C8620ED18460088219F /* DeleteEmployeeHandler.swift */,
+			);
+			name = DeleteEmployee;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -524,47 +685,80 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7B4889220E9131F008830A1 /* ClientHomeViewController.swift in Sources */,
+				A7DC6A5920EDA81D00DE9286 /* RegisterViewController.swift in Sources */,
 				A768360520EA9B9700B0941F /* GetAccountsHandler.swift in Sources */,
 				A7D0409620EC3BC800A332A0 /* API_AddClient.swift in Sources */,
 				A7D0409320EC2C1200A332A0 /* AddAccountHandler.swift in Sources */,
 				A7159C0B20E8FA7000C26A0C /* LogCat.swift in Sources */,
+				A753F11320ED7A360037F85E /* PendingClientsDelegate.swift in Sources */,
 				A7B0042720E9867400F7234C /* UpdateClientInfoHandler.swift in Sources */,
 				A7B9737120E95B560051A820 /* GetClientInfoHandler.swift in Sources */,
 				A7159BF720E8EBAE00C26A0C /* LogInHandler.swift in Sources */,
+				A7D27C6820ED0C4F0088219F /* AdminViewController.swift in Sources */,
+				A7D27C7620ED14570088219F /* GetTellersDelegate.swift in Sources */,
 				A7159BFB20E8EC8E00C26A0C /* LogInDelegate.swift in Sources */,
 				A7B9736920E94F170051A820 /* AccountType.swift in Sources */,
 				A7D0409C20EC42CC00A332A0 /* TellerNewTransactionViewController.swift in Sources */,
 				A768360B20EADAB100B0941F /* GetTransactionsDelegate.swift in Sources */,
 				A7D0409820EC3BD500A332A0 /* AddClientDelegate.swift in Sources */,
+				A7D27C8520ED18370088219F /* API_DeleteEmployee.swift in Sources */,
+				A723E57F20ED529600EEC8C7 /* AllTransactionsDelegate.swift in Sources */,
 				A768360920EAD77A00B0941F /* AccountViewController.swift in Sources */,
 				A7B0042520E9866900F7234C /* API_UpdateClientInfo.swift in Sources */,
 				A7B9737320E95B630051A820 /* GetClientInfoDelegate.swift in Sources */,
 				A7FA124C20EAE7CB00AB9AAC /* API_PerformTransaction.swift in Sources */,
+				A7D27C7420ED144A0088219F /* API_GetTellers.swift in Sources */,
 				A7CC8B1820EC445900BB2DFE /* TellerTransactionDelegate.swift in Sources */,
+				A753F11720ED7A8E0037F85E /* PendingClient.swift in Sources */,
+				A753F11C20ED7D140037F85E /* API_AdminApplication.swift in Sources */,
+				A753F12520ED8ED90037F85E /* ApproveApplicationHandler.swift in Sources */,
 				A7FA125020EAE7E600AB9AAC /* PerformTransactionHandler.swift in Sources */,
 				A7B9736320E94D330051A820 /* Account.swift in Sources */,
 				A7D0409120EC2C0800A332A0 /* AddAccountDelegate.swift in Sources */,
+				A753F11520ED7A430037F85E /* PendingClientsHandler.swift in Sources */,
 				A7B0042920E9867F00F7234C /* UpdateClientInfoDelegate.swift in Sources */,
+				A7D27C8720ED18460088219F /* DeleteEmployeeHandler.swift in Sources */,
 				A7159C0520E8F51400C26A0C /* SweetAlert.swift in Sources */,
 				A7B9735F20E94CBC0051A820 /* ClientData.swift in Sources */,
 				A768360720EA9BA400B0941F /* GetAccountsDelegate.swift in Sources */,
+				A753F11E20ED7D200037F85E /* AdminApplicationHandler.swift in Sources */,
+				A723E58520ED56E700EEC8C7 /* TransactionViewController.swift in Sources */,
 				A7159BFD20E8ECF700C26A0C /* LogInResult.swift in Sources */,
+				A723E58320ED54A400EEC8C7 /* AdminItemsViewController.swift in Sources */,
 				A7B0042D20EA995900F7234C /* API_GetTransactions.swift in Sources */,
+				A753F10E20ED79890037F85E /* AdminApplicationViewController.swift in Sources */,
+				A753F11A20ED7D070037F85E /* AdminApplicationDelegate.swift in Sources */,
 				A7159C0220E8F13E00C26A0C /* API_LogIn.swift in Sources */,
 				A7B4888F20E90E4D008830A1 /* Extensions.swift in Sources */,
+				A73BA6F020ED243A008EC8E2 /* AddEmployeeHandler.swift in Sources */,
 				A7B9736E20E958BC0051A820 /* RequestsHelper.swift in Sources */,
+				A7D27C7120ED0E9E0088219F /* Admin.swift in Sources */,
 				A7159C0720E8F52F00C26A0C /* AlertShower.swift in Sources */,
+				A7D27C7A20ED147F0088219F /* Teller.swift in Sources */,
+				A753F12020ED7D930037F85E /* ClientApplication.swift in Sources */,
+				A7D27C6F20ED0E390088219F /* GetAdminsHandler.swift in Sources */,
 				A7D0408F20EC2BF100A332A0 /* API_AddAccount.swift in Sources */,
 				A7D0409A20EC3BDF00A332A0 /* AddClientHandler.swift in Sources */,
 				A7FA125220EAEB2C00AB9AAC /* ClientNewTransactionViewController.swift in Sources */,
 				A7FA124E20EAE7D700AB9AAC /* PerformTransactionDelegate.swift in Sources */,
+				A7D27C8320ED182D0088219F /* DeleteEmployeeDelegate.swift in Sources */,
 				A7159BC920E8E98700C26A0C /* AppDelegate.swift in Sources */,
+				A723E58120ED52A100EEC8C7 /* AllTransactionsHandler.swift in Sources */,
 				A7CC8B1A20EC446300BB2DFE /* TellerTransactionHandler.swift in Sources */,
 				A7B0041D20E9821A00F7234C /* API_ChangePassword.swift in Sources */,
 				A768360320EA9B0B00B0941F /* API_GetAccounts.swift in Sources */,
+				A7D27C6B20ED0E1C0088219F /* API_GetAdmins.swift in Sources */,
+				A753F12920ED9A740037F85E /* ChangePasswordViewController.swift in Sources */,
+				A753F12320ED8ECE0037F85E /* ApproveApplicationDelegate.swift in Sources */,
 				A7B0042B20EA944400F7234C /* AccountsViewController.swift in Sources */,
+				A7D27C7820ED14620088219F /* GetTellersHandler.swift in Sources */,
 				A7B9736C20E957650051A820 /* API_GetClientInfo.swift in Sources */,
+				A73BA6EE20ED242E008EC8E2 /* AddEmployeeDelegate.swift in Sources */,
+				A7D27C6D20ED0E260088219F /* GetAdminsDelegate.swift in Sources */,
+				A73BA6F220ED2448008EC8E2 /* API_AddEmployee.swift in Sources */,
 				A7B9736520E94EA30051A820 /* Currency.swift in Sources */,
+				A7D27C8920ED1A980088219F /* EmployeeViewController.swift in Sources */,
+				A753F11120ED7A2A0037F85E /* API_PendingClients.swift in Sources */,
 				A7B0042220E9824200F7234C /* ChangePasswordDelegate.swift in Sources */,
 				A768360D20EADAC300B0941F /* GetTransactionsHandler.swift in Sources */,
 				A7159C0020E8F0F300C26A0C /* Constants.swift in Sources */,
@@ -573,7 +767,9 @@
 				A7B0042020E9823700F7234C /* ChangePasswordHandler.swift in Sources */,
 				A7B9736720E94EAE0051A820 /* ExchangeRate.swift in Sources */,
 				A7D0408A20EC22DA00A332A0 /* TellerViewController.swift in Sources */,
+				A753F12720ED8EE30037F85E /* API_ApproveApplication.swift in Sources */,
 				A7B9736120E94D0A0051A820 /* Transaction.swift in Sources */,
+				A723E57C20ED528500EEC8C7 /* API_AllTransactions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -747,14 +943,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3FASV8ED98;
+				DEVELOPMENT_TEAM = XT2635Q8Z3;
 				INFOPLIST_FILE = "MY-Banking/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.auc.900142457.MY-Banking";
+				PRODUCT_BUNDLE_IDENTIFIER = Dokany.OnBank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -766,14 +962,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3FASV8ED98;
+				DEVELOPMENT_TEAM = XT2635Q8Z3;
 				INFOPLIST_FILE = "MY-Banking/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.auc.900142457.MY-Banking";
+				PRODUCT_BUNDLE_IDENTIFIER = Dokany.OnBank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

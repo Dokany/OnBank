@@ -15,12 +15,12 @@ class AddAccountHandler {
         self.delegate = delegate
     }
     
-    func addAccount (clientId: Int, type: AccountType){
-        self.delegate.onAccountAdded(result: true)
-        return;
+    func addAccount (clientId: Int, NIN: String, type: AccountType, currency: String){
+       // self.delegate.onAccountAdded(result: true)
+       // return;
         
         let Api_addAccount = API_AddAccount()
-        Api_addAccount.request(clientId: clientId, type: type, completionHandler: { data, response, error in
+        Api_addAccount.request(clientId: clientId, NIN: NIN, type: type, currency: currency, completionHandler: { data, response, error in
             LogCat.printError(tag: "AddAccount", message: "\(String(data: data!, encoding: String.Encoding.utf8)!)")
             
             if error == nil {

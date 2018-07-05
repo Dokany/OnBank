@@ -12,5 +12,7 @@ protocol LogInDelegate: class {
     /**
      This method is called when the user attempts to login to the system
      */
-    func userDidAttemptLogIn(result: LogInResult, id: Int?)
+    func userDidAttemptLogIn(result: LogInResult, id: Int?, must_change: Bool, type: String)
+    
+    func userDidResetPassword(result: Bool)
 }

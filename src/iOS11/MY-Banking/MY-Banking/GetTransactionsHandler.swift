@@ -16,8 +16,8 @@ class GetTransactionsHandler {
     }
     
     func getTransactions (acctno: Int){
-       buildHardCodedTransactionsAndNotifyDelegate()
-       return;
+      //buildHardCodedTransactionsAndNotifyDelegate()
+      //return;
         
         let Api_getTransactions = API_GetTransactions()
         Api_getTransactions.request(acctno: acctno, completionHandler: { data, response, error in
@@ -57,15 +57,20 @@ class GetTransactionsHandler {
         if let number = dict[API_GetTransactions.number] as? Int {
             var transactions = [Transaction()]
             transactions.removeAll()
-            for i in 0...(number-1) {
-                if let element = dict[String(i)] as? [String: AnyObject] {
-                    if let transaction = self.buildTransaction(element: element) {
-                        transactions.append(transaction)
+            if number < 1 {
+                self.delegate.transactionsReceived(transactions: nil)
+                return
+            } else {
+                for i in 0...(number-1) {
+                    if let element = dict[String(i)] as? [String: AnyObject] {
+                        if let transaction = self.buildTransaction(element: element) {
+                            transactions.append(transaction)
+                        } else {
+                            LogCat.printError(tag: "GetTransactions", message: "Error unpacking trnasaction")
+                        }
                     } else {
-                        LogCat.printError(tag: "GetTransactions", message: "Error unpacking trnasaction")
+                        LogCat.printError(tag: "GetTransactions", message: "Unable to unpack trnasaction \(i)")
                     }
-                } else {
-                    LogCat.printError(tag: "GetTransactions", message: "Unable to unpack trnasaction \(i)")
                 }
             }
             
@@ -105,9 +110,9 @@ class GetTransactionsHandler {
         var transactions = [Transaction()]
         
         transactions.removeAll()
-       
-        transactions.append(Transaction(number: 1234, date: "25-Jun-2018", amount: "172.5", teller: 2))
-         transactions.append(Transaction(number: 5678, date: "25-Mar-2016", amount: "-18", teller: nil))
+               
+        transactions.append(Transaction(number: 1234, date: "25-Jun-2018", amount: "172.5", teller: 2, acctno: nil, currency: nil))
+        transactions.append(Transaction(number: 5678, date: "25-Mar-2016", amount: "-18", teller: nil, acctno: nil, currency: nil))
 
         self.delegate.transactionsReceived(transactions: transactions)
     }

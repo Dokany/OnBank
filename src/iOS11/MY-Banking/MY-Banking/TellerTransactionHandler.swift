@@ -16,8 +16,8 @@ class TellerTransactionHandler {
     }
     
     func performTransaction(tellerId: Int, acctno: Int, amount: String, is_deposit: Bool){
-        self.delegate.onTransactionPerformed(result: true)
-        return;
+      // self.delegate.onTransactionPerformed(result: true)
+      //  return;
         
         let Api_tellerTransaction = API_TellerTransaction()
         Api_tellerTransaction.request(tellerId: tellerId, acctno: acctno, amount: amount, is_deposit: is_deposit, completionHandler: { data, response, error in

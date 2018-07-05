@@ -20,6 +20,19 @@ class AlertShower {
         }
     }
     /**
+     it shows an alert with 2 buttons using SweetAlert then executes the closure
+     */
+    class func showSweetAlert(onCondition: Bool, title: String, message: String?, style: AlertStyle, buttonTitle: String, buttonColor: UIColor = UIColor.blue, otherButtonTitle: String?, action: ((_ isOtherButton: Bool) -> Void)? = nil) {
+        if onCondition {
+            _ = SweetAlert().showAlert(title, subTitle: message, style: style, buttonTitle: buttonTitle, buttonColor: buttonColor, otherButtonTitle: otherButtonTitle, action: action)
+        } else {
+            if action != nil {
+                action!(false)
+            }
+        }
+    }
+    
+    /**
      it shows an alert using SweetAlert, then executes the closure the view controller
      */
     class func showSweetAlertAndExecute(onCondition: Bool, title: String, message: String?, style: AlertStyle, buttonTitle: String, action: ((_ isOtherButton: Bool) -> Void)? = nil) {

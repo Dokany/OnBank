@@ -16,8 +16,8 @@ class GetAccountsHandler {
     }
     
     func getAccounts (clientId: Int){
-        buildHardCodedAccountsAndNotifyDelegate()
-        return;
+      // buildHardCodedAccountsAndNotifyDelegate()
+     //  return;
         
         let Api_getAccounts = API_GetAccounts()
         Api_getAccounts.request(clientId: clientId, completionHandler: { data, response, error in
@@ -44,15 +44,20 @@ class GetAccountsHandler {
         if let number = dict[API_GetAccounts.number] as? Int {
             var accounts = [Account()]
             accounts.removeAll()
-            for i in 0...(number-1) {
-                if let element = dict[String(i)] as? [String: AnyObject] {
-                    if let account = self.buildAccount(element: element) {
-                        accounts.append(account)
+            if number < 1 {
+                self.delegate.accountsReceived(accounts: nil)
+                return
+            } else {
+                for i in 0...(number-1) {
+                    if let element = dict[String(i)] as? [String: AnyObject] {
+                        if let account = self.buildAccount(element: element) {
+                            accounts.append(account)
+                        } else {
+                            LogCat.printError(tag: "GetAccounts", message: "Unable to unpack account")
+                        }
                     } else {
-                        LogCat.printError(tag: "GetAccounts", message: "Unable to unpack account")
+                        LogCat.printError(tag: "GetAccounts", message: "Unable to unpack account \(i)")
                     }
-                } else {
-                    LogCat.printError(tag: "GetAccounts", message: "Unable to unpack account \(i)")
                 }
             }
             

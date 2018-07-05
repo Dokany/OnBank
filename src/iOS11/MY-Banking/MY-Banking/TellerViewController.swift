@@ -29,6 +29,7 @@ internal class TellerViewController: UIViewController, AddAccountDelegate, GetAc
     @IBOutlet weak var password_tf: UITextField!
     @IBOutlet weak var address_te: UITextView!
     
+    @IBOutlet weak var firstNationalId_tf: UITextField!
     override func viewWillAppear(_ animated: Bool) {
     }
     override func viewDidLoad() {
@@ -67,29 +68,55 @@ internal class TellerViewController: UIViewController, AddAccountDelegate, GetAc
             AlertShower.showErrorAlert(title: "Error", message: "Incorrect Client Id")
         }
     }
-    @IBAction func newCurrentAccount(_ sender: UIButton) {
+    
+    func addAccount(type: AccountType) {
         if let id = clientId_tf?.text {
             if let clientId = Int(id) {
-                self.pauseInteraction()
-                add_account_handler!.addAccount(clientId: clientId, type: .Current)
+                if let nin = firstNationalId_tf?.text {
+                    if nin.count > 0 {
+                        var currency = API_AddAccount.EGP
+                        
+                        AlertShower.showSweetAlert(onCondition: true, title: "Choose Currency", message: nil, style: .none, buttonTitle: "EGP", otherButtonTitle: "Foreign", action: {(isOtherButton: Bool) -> Void in
+                            if !isOtherButton {
+                                AlertShower.showSweetAlert(onCondition: true, title: "Choose Currency", message: nil, style: .none, buttonTitle: "USD", otherButtonTitle: "EUR", action: {(isThirdButton: Bool) -> Void in
+                                    if !isThirdButton {
+                                        currency = API_AddAccount.EUR
+                                    } else {
+                                        currency = API_AddAccount.USD
+                                    }
+                                    LogCat.printError(tag: "TellerViewController", message: "Currency = \(currency)")
+                                    self.pauseInteraction()
+                                    self.add_account_handler!.addAccount(clientId: clientId, NIN: nin, type: type, currency: currency)
+                                })
+                            } else {
+                                currency = API_AddAccount.EGP
+                                LogCat.printError(tag: "TellerViewController", message: "Currency = \(currency)")
+                                self.pauseInteraction()
+                                self.add_account_handler!.addAccount(clientId: clientId, NIN: nin, type: type, currency: currency)
+                            }
+                        })
+                        
+                    } else {
+                        AlertShower.showErrorAlert(title: "Error", message: "Incorrect National Id")
+                    }
+                } else {
+                    AlertShower.showErrorAlert(title: "Error", message: "Incorrect National Id")
+                }
+                
             } else {
                 AlertShower.showErrorAlert(title: "Error", message: "Incorrect Client Id")
             }
         } else {
             AlertShower.showErrorAlert(title: "Error", message: "Incorrect Client Id")
         }
+        
+    }
+    
+    @IBAction func newCurrentAccount(_ sender: UIButton) {
+        self.addAccount(type: .Current)
     }
     @IBAction func newSavingsAccount(_ sender: UIButton) {
-        if let id = clientId_tf?.text {
-            if let clientId = Int(id) {
-                self.pauseInteraction()
-                add_account_handler!.addAccount(clientId: clientId, type: .Savings)
-            } else {
-                AlertShower.showErrorAlert(title: "Error", message: "Incorrect Client Id")
-            }
-        } else {
-            AlertShower.showErrorAlert(title: "Error", message: "Incorrect Client Id")
-        }
+        self.addAccount(type: .Savings)
     }
     @IBAction func addClient(_ sender: UIButton) {
         if let nin = nationalId_tf.text {
@@ -100,21 +127,11 @@ internal class TellerViewController: UIViewController, AddAccountDelegate, GetAc
                             if let u = username_tf.text {
                                 if let p = password_tf.text {
                                     if let a = address_te.text {
-                                        if nin.count > 0 && e.count > 0 && f.count > 0 && l.count > 0 && h.count > 0 && u.count > 0 && p.count > 0 {
-                                            if a.count > 0 {
-                                                pauseInteraction()
-                                                add_client_handler?.addClient(tellerId: tellerId!, NIN: nin, username: u, password: p, email: e, phone: h, first_name: f, last_name: l, address: address_te.text)
-                                                return;
-                                            } else {
-                                                pauseInteraction()
-                                                add_client_handler?.addClient(tellerId: tellerId!, NIN: nin, username: u, password: p, email: e, phone: h, first_name: f, last_name: l, address: nil)
-                                                return;
-                                            }
+                                        if nin.count > 0 && e.count > 0 && f.count > 0 && l.count > 0 && h.count > 0 && u.count > 0 && p.count > 0 && a.count > 0 {
+                                            pauseInteraction()
+                                            add_client_handler?.addClient(tellerId: tellerId!, NIN: nin, username: u, password: p, email: e, phone: h, first_name: f, last_name: l, address: address_te.text)
+                                            return;
                                         }
-                                    } else {
-                                        pauseInteraction()
-                                        add_client_handler?.addClient(tellerId: tellerId!, NIN: nin, username: u, password: p, email: e, phone: h, first_name: f, last_name: l, address: nil)
-                                        return;
                                     }
                                 }
                             }
@@ -127,17 +144,10 @@ internal class TellerViewController: UIViewController, AddAccountDelegate, GetAc
         AlertShower.showErrorAlert(title: "Error", message: "Invalid Form")
     }
     
-    func onAccountAdded(result: Bool) {
-        clientId = Int(self.clientId_tf.text!)
+    func clearTexts() {
+        return;
         clientId_tf.text = ""
-        resumeInteraction()
-        if result {
-            AlertShower.showSuccessAlert(title: "Success", message: "Account Added")
-        } else {
-            AlertShower.showErrorAlert(title: "Error", message: "Account Not Added")
-        }
-    }
-    func onClientAdded(result: Bool) {
+        firstNationalId_tf.text = ""
         nationalId_tf.text = ""
         email_tf.text = ""
         firstName_tf.text = ""
@@ -146,6 +156,20 @@ internal class TellerViewController: UIViewController, AddAccountDelegate, GetAc
         username_tf.text = ""
         password_tf.text = ""
         address_te.text = ""
+    }
+    
+    func onAccountAdded(result: Bool) {
+        clientId = Int(self.clientId_tf.text!)
+        clearTexts()
+        resumeInteraction()
+        if result {
+            AlertShower.showSuccessAlert(title: "Success", message: "Account Added")
+        } else {
+            AlertShower.showErrorAlert(title: "Error", message: "Account Not Added")
+        }
+    }
+    func onClientAdded(result: Bool) {
+        clearTexts()
         
         resumeInteraction()
         if result {

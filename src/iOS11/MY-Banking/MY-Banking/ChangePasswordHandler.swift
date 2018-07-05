@@ -19,7 +19,8 @@ class ChangePasswordHandler {
      This method is called to attempt login
      */
     func changePassword (username: String, password: String, type: String){
-        
+       // self.delegate.userDidAttemptChangePassword(result: true)
+       // return;
         let Api_changePassword = API_ChangePassword()
         Api_changePassword.request(username: username, password: password, type: type, completionHandler: { data, response, error in
         if error == nil {
