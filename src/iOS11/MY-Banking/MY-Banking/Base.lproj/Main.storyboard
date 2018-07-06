@@ -563,7 +563,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.074509803920000006" green="0.25098039220000001" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="Forget Password? Click Here">
+                                <state key="normal" title="Forgot Password? Click Here">
                                     <color key="titleColor" red="1" green="0.69072544704613692" blue="0.34652154037592409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -793,10 +793,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8K5-wK-59L">
-                                <rect key="frame" x="30" y="79" width="320" height="549"/>
+                                <rect key="frame" x="30" y="79" width="320" height="575"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJ5-FG-YwM">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="29.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="31.5"/>
                                         <color key="backgroundColor" red="0.043137254901960784" green="0.14509803921568626" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Access Accounts">
@@ -807,25 +807,25 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uvk-SB-Vqh">
-                                        <rect key="frame" x="0.0" y="44.5" width="320" height="303.5"/>
+                                        <rect key="frame" x="0.0" y="46.5" width="320" height="318"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydi-Fu-X61">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="29"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="31"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="IFQ-4a-gSx">
-                                                <rect key="frame" x="0.0" y="39" width="315" height="30"/>
+                                                <rect key="frame" x="0.0" y="41" width="315" height="31.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLG-zK-NjX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="31.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="le0-1z-KJ6">
-                                                        <rect key="frame" x="94" y="0.0" width="221" height="30"/>
+                                                        <rect key="frame" x="94" y="0.0" width="221" height="31.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -837,16 +837,16 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jVc-ZX-R02">
-                                                <rect key="frame" x="0.0" y="79" width="320" height="30.5"/>
+                                                <rect key="frame" x="0.0" y="82.5" width="320" height="31.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5R-xO-L4H">
-                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="30.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="31.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJh-Ie-rOk">
-                                                        <rect key="frame" x="99" y="0.0" width="221" height="30.5"/>
+                                                        <rect key="frame" x="99" y="0.0" width="221" height="31.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -854,16 +854,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XW9-kh-XMb">
-                                                <rect key="frame" x="0.0" y="119.5" width="320" height="30"/>
+                                                <rect key="frame" x="0.0" y="124" width="320" height="31"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKv-dW-Xt5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="31"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r49-Mq-nk3">
-                                                        <rect key="frame" x="99" y="0.0" width="221" height="30"/>
+                                                        <rect key="frame" x="99" y="0.0" width="221" height="31"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="phonePad" textContentType="tel"/>
@@ -871,16 +871,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uvg-Ro-BNR">
-                                                <rect key="frame" x="0.0" y="159.5" width="320" height="29"/>
+                                                <rect key="frame" x="0.0" y="165" width="320" height="31"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72j-gK-RgU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="29"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="31"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gCZ-Up-goY">
-                                                        <rect key="frame" x="99" y="0.0" width="221" height="29"/>
+                                                        <rect key="frame" x="99" y="0.0" width="221" height="31"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
@@ -888,16 +888,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ohs-EJ-LEy">
-                                                <rect key="frame" x="0.0" y="198.5" width="320" height="66"/>
+                                                <rect key="frame" x="0.0" y="206" width="320" height="71"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdE-oK-3as">
-                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="66"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="71"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e9f-89-A3j">
-                                                        <rect key="frame" x="99" y="0.0" width="221" height="66"/>
+                                                        <rect key="frame" x="99" y="0.0" width="221" height="71"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="no"/>
@@ -905,7 +905,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gl-DC-m8L">
-                                                <rect key="frame" x="0.0" y="274.5" width="320" height="29"/>
+                                                <rect key="frame" x="0.0" y="287" width="320" height="31"/>
                                                 <color key="backgroundColor" red="0.043137254901960784" green="0.14509803921568626" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <state key="normal" title="Update Contact Information">
@@ -936,25 +936,25 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kGC-Xf-Xhy">
-                                        <rect key="frame" x="0.0" y="363" width="320" height="186"/>
+                                        <rect key="frame" x="0.0" y="379.5" width="320" height="195.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xp7-7e-Wgv">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="29.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="31.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="84u-7v-SYb">
-                                                <rect key="frame" x="0.0" y="39.5" width="320" height="29.5"/>
+                                                <rect key="frame" x="0.0" y="41.5" width="320" height="31.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Old" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bl6-sC-5ll">
-                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="29.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="31.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" borderStyle="roundedRect" placeholder="Old Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vC5-iU-mxL">
-                                                        <rect key="frame" x="99" y="0.0" width="221" height="29.5"/>
+                                                        <rect key="frame" x="94" y="0.0" width="226" height="31.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
@@ -962,16 +962,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="b6H-aA-bV5">
-                                                <rect key="frame" x="0.0" y="79" width="320" height="29"/>
+                                                <rect key="frame" x="0.0" y="83" width="320" height="31.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHj-Je-aVE">
-                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="29"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="31.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PPX-3E-1W8">
-                                                        <rect key="frame" x="99" y="0.0" width="221" height="29"/>
+                                                        <rect key="frame" x="94" y="0.0" width="226" height="31.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
@@ -979,16 +979,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="v1b-d0-1mZ">
-                                                <rect key="frame" x="0.0" y="118" width="320" height="28.5"/>
+                                                <rect key="frame" x="0.0" y="124.5" width="320" height="30.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSA-Dp-ij8">
-                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="28.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="30.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" borderStyle="roundedRect" placeholder="Confirm New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hdV-5f-Bpa">
-                                                        <rect key="frame" x="99" y="0.0" width="221" height="28.5"/>
+                                                        <rect key="frame" x="94" y="0.0" width="226" height="30.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
@@ -996,7 +996,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mV5-6C-YR4">
-                                                <rect key="frame" x="0.0" y="156.5" width="320" height="29.5"/>
+                                                <rect key="frame" x="0.0" y="165" width="320" height="30.5"/>
                                                 <color key="backgroundColor" red="0.043137254901960784" green="0.14509803921568626" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <state key="normal" title="Change Password">
@@ -1034,7 +1034,7 @@
                                 </constraints>
                             </stackView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="jif-Mu-2pc">
-                                <rect key="frame" x="171.5" y="335" width="37" height="37"/>
+                                <rect key="frame" x="171.5" y="348" width="37" height="37"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.074509803921568626" green="0.25098039215686274" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

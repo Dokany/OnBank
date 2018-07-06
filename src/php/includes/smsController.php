@@ -25,7 +25,7 @@ class SmsController
             // Use the client to do fun stuff like send text messages!
             $client->messages->create(
                 // the number to send the message to
-                '+201003119966',
+                '+XXXXXXXXXXXX',
                 array(
                 // Twilio phone number
                 'from' => '+19316503551',
